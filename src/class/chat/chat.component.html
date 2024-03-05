@@ -1,0 +1,32 @@
+<div style="height: 500px; width: 300px;" class="d-flex flex-column justify-content-between">
+    <div>
+
+    </div>
+      
+<form (ngSubmit)="onSubmit()" #messageForm="ngForm">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" [(ngModel)]="MessageContent" required></textarea>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="UserName" required>
+    <br>
+    <label for="CourseId">Course ID:</label>
+    <input type="number" id="CourseId" [(ngModel)]="CourseId" name="CourseId" required>
+    <br>
+    
+    <button type="submit">Submit</button>
+</form> 
+
+</div>
+
+<div style="height: 500px; width: 300px;" class="d-flex flex-column justify-content-between">
+    <div *ngFor="let message of messages">
+        <p>{{ message.UserName }}: {{ message.MessageContent }}</p>
+ 
+
+    </div>
+      
+    <!-- Your existing form code -->
+</div>
+
+
